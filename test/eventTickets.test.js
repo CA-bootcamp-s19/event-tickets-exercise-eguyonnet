@@ -88,7 +88,7 @@ contract('EventTicket', function(accounts) {
                 const postSaleAmount = await web3.eth.getBalance(secondAccount)
         
                 
-                assert.equal((Number(postSaleAmount.slice(-4)) + ticketPrice).toString(), preSaleAmount.slice(-4), "overpayment should be refunded")
+                assert.equal((Number(postSaleAmount.slice(-4)) + ticketPrice).toString(), Number(preSaleAmount.slice(-4)).toString(), "overpayment should be refunded")
             })
         })  
         
